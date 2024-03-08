@@ -1,0 +1,67 @@
+<!DOCTYPE html> <html><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title> what kind of movie are you? </title>
+ 
+          <link href="https://fonts.googleapis.com/css2?family=Oswald&amp;display=swap" rel="stylesheet">
+<style>body {
+    font-family: 'Oswald', sans-serif;
+    background-color: #17d3ff;
+    text-align: center;
+}
+
+img {
+    width: 400px;
+}</style></head>
+
+<body>
+
+  <div class="title">
+   <h1>What kind of mive are you? </h1>
+        </div>
+        <div class="questions">
+  
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlmCOVgUJVmKMRQntFtFQSzvxbrE-SvOf-AA&amp;usqp=CAU">
+
+          <h2>What is your scream time? </h2>
+           <input placeholder="Number 0-24" class="number">
+             <h2>sunny weather or cold and rainy? </h2>
+ <div>
+          <input placeholder="hot or cold" class="wather">
+      <h2>red or blue?</h2>
+ 
+          <input placeholder="pick one" class="color">
+           </div>
+   <button>clinck</button>
+
+    <div class="results">
+    this is where the user will see their quiz result!
+      </div>
+            
+        </div>
+
+    <script src="script.js"></script>
+
+
+<script>
+/*__POPCODESTART__*/
+var button = document.querySelector("button");
+var fullParagraph = document.querySelector(".results");
+
+button.onclick = function () {
+  fullParagraph.style.display = "block";
+  var number = document.querySelector(".number").value;
+  var wather = document.querySelector(".wather").value;
+  var color = document.querySelector(".color").value;
+  var origin = document.querySelector(".origin").value;
+  fullParagraph.innerHTML = " Your scream time is " + number + " and you like " + wather + " days, you pick " + color + " so you a " + origin;
+
+  if (number >= "10" && wather !== "suuny" && color !== "red") {
+    fullParagraph.innerHTML = "fuuny moive";
+  } else if (number >= "20" && wather !== "cold" && color !== "red") {
+    fullParagraph.innerHTML = "action moive";
+  } else if (number >= "24" && wather !== "rainy" && color !== "blue") {
+    fullParagraph.innerHTML = "sad moive";
+  }
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBvcGNvZGVQcmV2aWV3LmpzIl0sIm5hbWVzIjpbImJ1dHRvbiIsImRvY3VtZW50IiwicXVlcnlTZWxlY3RvciIsImZ1bGxQYXJhZ3JhcGgiLCJvbmNsaWNrIiwic3R5bGUiLCJkaXNwbGF5IiwibnVtYmVyIiwidmFsdWUiLCJ3YXRoZXIiLCJjb2xvciIsIm9yaWdpbiIsImlubmVySFRNTCJdLCJtYXBwaW5ncyI6IkFBQ0EsSUFBSUEsTUFBTSxHQUFHQyxRQUFRLENBQUNDLGFBQVQsQ0FBdUIsUUFBdkIsQ0FBYjtBQUNBLElBQUlDLGFBQWEsR0FBR0YsUUFBUSxDQUFDQyxhQUFULENBQXVCLFVBQXZCLENBQXBCOztBQUNBRixNQUFNLENBQUNJLE9BQVAsR0FBaUIsWUFBVztBQUN2QkQsRUFBQUEsYUFBYSxDQUFDRSxLQUFkLENBQW9CQyxPQUFwQixHQUE0QixPQUE1QjtBQUNELE1BQUlDLE1BQU0sR0FBR04sUUFBUSxDQUFDQyxhQUFULENBQXdCLFNBQXhCLEVBQW1DTSxLQUFoRDtBQUNDLE1BQUlDLE1BQU0sR0FBRVIsUUFBUSxDQUFDQyxhQUFULENBQXVCLFNBQXZCLEVBQWtDTSxLQUE5QztBQUNELE1BQUlFLEtBQUssR0FBR1QsUUFBUSxDQUFDQyxhQUFULENBQXVCLFFBQXZCLEVBQWlDTSxLQUE3QztBQUNFLE1BQUlHLE1BQU0sR0FBR1YsUUFBUSxDQUFDQyxhQUFULENBQXVCLFNBQXZCLEVBQWtDTSxLQUEvQztBQUVETCxFQUFBQSxhQUFhLENBQUNTLFNBQWQsR0FBMEIsMEJBQTBCTCxNQUExQixHQUFtQyxnQkFBbkMsR0FBc0RFLE1BQXRELEdBQStELGtCQUEvRCxHQUFvRkMsS0FBcEYsR0FBNEYsWUFBNUYsR0FBMkdDLE1BQXJJOztBQUdDLE1BQUlKLE1BQU0sSUFBSSxJQUFWLElBQWtCRSxNQUFNLEtBQUksT0FBNUIsSUFBdUNDLEtBQUssS0FBSSxLQUFwRCxFQUEyRDtBQUMxRFAsSUFBQUEsYUFBYSxDQUFDUyxTQUFkLEdBQTBCLGFBQTFCO0FBQ0EsR0FGRCxNQUdNLElBQUtMLE1BQU0sSUFBSSxJQUFWLElBQWtCRSxNQUFNLEtBQUksTUFBNUIsSUFBc0NDLEtBQUssS0FBSSxLQUFwRCxFQUEyRDtBQUNuRVAsSUFBQUEsYUFBYSxDQUFDUyxTQUFkLEdBQTBCLGNBQTFCO0FBQ0ksR0FGSSxNQUdDLElBQUtMLE1BQU0sSUFBSSxJQUFWLElBQWtCRSxNQUFNLEtBQUksT0FBNUIsSUFBdUNDLEtBQUssS0FBSSxNQUFyRCxFQUE2RDtBQUNwRVAsSUFBQUEsYUFBYSxDQUFDUyxTQUFkLEdBQTBCLFdBQTFCO0FBQ0M7QUFHTixDQXJCRCIsInNvdXJjZXNDb250ZW50IjpbIlxubGV0IGJ1dHRvbiA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCJidXR0b25cIik7XG5sZXQgZnVsbFBhcmFncmFwaCA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIucmVzdWx0c1wiKTtcbmJ1dHRvbi5vbmNsaWNrID0gZnVuY3Rpb24oKSB7XG4gICAgIGZ1bGxQYXJhZ3JhcGguc3R5bGUuZGlzcGxheT1cImJsb2NrXCI7XG4gICAgbGV0IG51bWJlciA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IgKFwiLm51bWJlclwiKS52YWx1ZTtcbiAgICAgbGV0IHdhdGhlciA9ZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi53YXRoZXJcIikudmFsdWU7XG4gICAgbGV0IGNvbG9yID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5jb2xvclwiKS52YWx1ZTtcbiAgICAgIGxldCBvcmlnaW4gPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLm9yaWdpblwiKS52YWx1ZTtcbiAgICBcbiAgICAgZnVsbFBhcmFncmFwaC5pbm5lckhUTUwgPSBcIiBZb3VyIHNjcmVhbSB0aW1lIGlzIFwiICsgbnVtYmVyICsgXCIgYW5kIHlvdSBsaWtlIFwiICsgd2F0aGVyICsgXCIgZGF5cywgeW91IHBpY2sgXCIgKyBjb2xvciArIFwiIHNvIHlvdSBhIFwiICsgb3JpZ2luO1xuICAgIFxuICAgIFxuICAgICAgaWYgKG51bWJlciA+PSBcIjEwXCIgJiYgd2F0aGVyICE9PVwic3V1bnlcIiAmJiBjb2xvciAhPT1cInJlZFwiKSB7XG4gICAgICAgZnVsbFBhcmFncmFwaC5pbm5lckhUTUwgPSBcImZ1dW55IG1vaXZlXCI7XG4gICAgICB9XG4gICAgICAgZWxzZSBpZiAgKG51bWJlciA+PSBcIjIwXCIgJiYgd2F0aGVyICE9PVwiY29sZFwiICYmIGNvbG9yICE9PVwicmVkXCIpIHsgICBcbiAgICBmdWxsUGFyYWdyYXBoLmlubmVySFRNTCA9IFwiYWN0aW9uIG1vaXZlXCI7XG4gICAgICAgfVxuICAgICAgICBlbHNlIGlmICAobnVtYmVyID49IFwiMjRcIiAmJiB3YXRoZXIgIT09XCJyYWlueVwiICYmIGNvbG9yICE9PVwiYmx1ZVwiKSB7ICAgXG4gICAgICBmdWxsUGFyYWdyYXBoLmlubmVySFRNTCA9IFwic2FkIG1vaXZlXCI7XG4gICAgICB9XG4gICAgXG4gICAgXG59OyJdfQ==</script></body></html>
